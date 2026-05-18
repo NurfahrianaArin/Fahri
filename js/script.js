@@ -276,3 +276,65 @@ if(unanswered){
     }
 
 }
+
+/* =====================================================
+   RESET QUIZ
+===================================================== */
+
+function resetQuiz(){
+
+    /* reset pilihan tombol */
+    const buttons =
+    document.querySelectorAll(".answer-buttons button");
+
+    buttons.forEach(button => {
+        button.classList.remove("selected");
+    });
+
+
+    /* reset data jawaban */
+    const groups =
+    document.querySelectorAll(".answer-buttons");
+
+    groups.forEach(group => {
+
+        group.dataset.correct = "";
+
+    });
+
+
+    /* reset hasil benar/salah */
+    const results =
+    document.querySelectorAll(".result");
+
+    results.forEach(result => {
+
+        result.innerHTML = "";
+        result.className = "result";
+
+    });
+
+
+    /* sembunyikan penjelasan jawaban */
+    const explanations =
+    document.querySelectorAll(".explanation");
+
+    explanations.forEach(exp => {
+
+        exp.style.display = "none";
+
+    });
+
+
+    /* reset poin */
+    document.getElementById("score-text")
+    .innerHTML =
+    "Poin Kamu: 0";
+
+
+    /* reset motivasi */
+    document.getElementById("motivation-text")
+    .innerHTML =
+    "Semangat belajar perbandingan trigonometri!";
+
+}
