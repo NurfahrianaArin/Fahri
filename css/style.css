@@ -1,42 +1,520 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background-color: #f5f7fa;
-}
-
-header {
-    background-color: #1e88e5;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
+/* =========================
+   NAVBAR FINAL (BERSIH & STABIL)
+========================= */
 nav {
     background-color: #1565c0;
-    padding: 10px;
+    padding: 12px;
     text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 nav a {
-    color: white;
-    margin: 0 15px;
+    position: relative;
+    color: #ffffff;
+    margin: 0 18px;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 500; /* FIX DI SINI */
+    font-family: 'Georgia', sans-serif;
+    transition: 0.3s;
 }
 
+/* garis bawah default */
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    left: 0;
+    bottom: -6px;
+    background-color: #ffeb3b;
+    transition: 0.3s ease;
+}
+
+/* hover */
 nav a:hover {
-    text-decoration: underline;
+    color: #ffeb3b;
 }
 
-main {
-    padding: 20px;
-    background-color: white;
-    margin: 20px;
-    border-radius: 8px;
+nav a:hover::after {
+    width: 100%;
 }
 
-footer {
+/* ACTIVE (yang dipilih) */
+nav a.active {
+    color: #ffeb3b;
+    font-weight: 600;
+}
+
+/* garis bawah aktif */
+nav a.active::after {
+    width: 100%;
+}
+
+header {
+    background: linear-gradient(135deg, #1e88e5, #7ec5ff);
+    color: white;
+    padding: 35px 25px;
+    text-align: center; /* KUNCI AGAR TENGAH */
+    font-family: 'Georgia', sans-serif;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-weight: 600;
+}
+
+header p {
+    margin-top: 8px;
+    opacity: 0.9;
+}
+.footer-blue {
+    background: linear-gradient(135deg, #1565c0, #327ab9);
+    color: rgb(255, 255, 255);
     text-align: center;
-    padding: 10px;
-    background-color: #eee;
+    padding: 18px;
+    margin-top: 50px; /* JARAK DARI ATAS */
+    font-family: 'Georgia', sans-serif;
+    border-radius: 0 0 12px 12px;
+}
+/* JUDUL UTAMA */
+header h1 {
+    font-size: 42px;        /* BESAR */
+    font-weight: 700;       /* TEGAS */
+    color: #ffffff;         /* PUTIH JELAS */
+    margin: 0;
+    text-align: center;
+
+    /* efek biar lebih kontras & elegan */
+    text-shadow: 0 2px 6px rgba(0,0,0,0.25);
+}
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 28px;
+    }
+}
+
+/* =========================================================
+   EVALUASI TRIGONOMETRI - PROFESSIONAL UI
+========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* =========================
+   GLOBAL
+========================= */
+body{
+    margin:0;
+    font-family:'Georgia', Times New Roman;
+    background:#eef4ff;
+    overflow-x:hidden;
+    overflow-y:auto;
+    color:#1e293b;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+.evaluasi-container{
+    width:90%;
+    max-width:1100px;
+    margin:40px auto;
+}
+
+/* =========================
+   CARD
+========================= */
+.quiz-box{
+    background:#ffffff;
+    border-radius:22px;
+    padding:28px;
+    margin-bottom:35px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    border:2px solid #dbeafe;
+}
+
+/* =========================
+   TITLE
+========================= */
+.quiz-title{
+    font-size:34px;
+    font-weight:700;
+    color:#1565c0;
+    margin-bottom:25px;
+    text-align:center;
+}
+
+/* =========================
+   TAB BUTTON
+========================= */
+.tab-buttons{
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+    margin-bottom:30px;
+}
+
+.tab-btn{
+    padding:12px 24px;
+    border:none;
+    border-radius:12px;
+    background:#1565c0;
+    color:white;
+    cursor:pointer;
+    font-size:17px;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.tab-btn:hover{
+    background:#0d47a1;
+    transform:translateY(-2px);
+}
+
+.tab-btn.active{
+    background:#ffca28;
+    color:#111827;
+}
+
+/* =========================
+   TAB CONTENT
+========================= */
+.tab-content{
+    display:none;
+    animation:fade 0.4s ease;
+}
+
+.tab-content.active{
+    display:block;
+}
+
+@keyframes fade{
+    from{
+        opacity:0;
+        transform:translateY(10px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* =========================
+   QUESTION CARD
+========================= */
+.question-card{
+    background:#f8fbff;
+    border-left:6px solid #1565c0;
+    border-radius:18px;
+    padding:22px;
+    margin-bottom:22px;
+}
+
+.question-card h3{
+    margin-top:0;
+    font-size:23px;
+    color:#0f172a;
+}
+
+/* =========================
+   QUESTION TEXT
+========================= */
+.question{
+    font-size:18px;
+    line-height:1.7;
+    margin-bottom:18px;
+    color:#334155;
+}
+
+/* =========================
+   BUTTON ANSWER
+========================= */
+.answer-buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.answer-buttons button{
+    padding:11px 20px;
+    border:none;
+    border-radius:10px;
+    background:#1e88e5;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+    font-family:'Georgia', Times New Roman;
+}
+
+.answer-buttons button:hover{
+    background:#1565c0;
+    transform:scale(1.03);
+}
+
+/* =========================
+   RESULT
+========================= */
+.result{
+    margin-top:15px;
+    font-size:17px;
+    font-weight:600;
+    display:none;
+}
+
+.result.correct{
+    color:#16a34a;
+    display:block;
+}
+
+.result.wrong{
+    color:#dc2626;
+    display:block;
+}
+
+/* =========================
+   GEO GAME ZONE
+========================= */
+.game-zone{
+    margin-top:45px;
+}
+
+.game-title{
+    font-size:32px;
+    text-align:center;
+    color:#0f172a;
+    margin-bottom:30px;
+}
+
+/* =========================
+   GAME QUESTION
+========================= */
+.game-question{
+    background:white;
+    border-radius:18px;
+    padding:24px;
+    margin-bottom:25px;
+    box-shadow:0 6px 20px rgba(0,0,0,0.08);
+}
+
+.game-question h4{
+    margin-top:0;
+    font-size:21px;
+    color:#1565c0;
+}
+
+.game-question p{
+    font-size:17px;
+    line-height:1.7;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media(max-width:768px){
+
+    .quiz-title{
+        font-size:28px;
+    }
+
+    .question-card h3{
+        font-size:20px;
+    }
+
+    .question{
+        font-size:16px;
+    }
+
+    .answer-buttons button{
+        width:100%;
+    }
+
+}
+
+/* =========================
+   SCORE BOX
+========================= */
+
+.score-box{
+    margin:40px auto;
+    padding:30px;
+    max-width:700px;
+    background:white;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 6px 20px rgba(0,0,0,0.1);
+}
+
+.score-box h2{
+    color:#1565c0;
+    font-size:32px;
+    margin-bottom:15px;
+    font-family:'Georgia', Times New Roman;
+}
+
+#score-text{
+    font-size:28px;
+    font-weight:700;
+    color:#0f172a;
+}
+
+#motivation-text{
+    margin-top:15px;
+    font-size:20px;
+    color:#03469f;
+    line-height:1.6;
+}
+
+/* =========================
+   PILIHAN JAWABAN
+========================= */
+
+.answer-buttons button{
+    padding:12px 18px;
+    margin:8px;
+    border:none;
+    border-radius:12px;
+    background:#5a9ff8;
+    cursor:pointer;
+    transition:0.3s;
+    font-size:16px;
+    font-family:'Georgia', Times New Roman;
+}
+
+/* hover */
+.answer-buttons button:hover{
+    background:#b1ccec;
+}
+
+/* jawaban dipilih */
+.answer-buttons button.selected{
+    background:#1565c0;
+    color:white;
+    font-weight:bold;
+    transform:scale(1.05);
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+
+/* =========================
+   HASIL BENAR SALAH
+========================= */
+
+.result{
+    margin-top:12px;
+    font-size:18px;
+    font-weight:bold;
+}
+
+.correct{
+    color:#16a34a;
+}
+
+.wrong{
+    color:#dc2626;
+}
+
+
+/* =========================
+   SCORE BOX
+========================= */
+
+.score-box{
+    margin:40px auto;
+    padding:30px;
+    max-width:700px;
+    background:white;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 6px 20px rgba(0,0,0,0.1);
+}
+
+.score-box h2{
+    color:#1565c0;
+    font-size:32px;
+}
+
+#score-text{
+    font-size:30px;
+    font-weight:bold;
+    margin-top:10px;
+}
+
+#motivation-text{
+    margin-top:15px;
+    font-size:20px;
+    line-height:1.6;
+}
+
+
+/* =========================
+   BUTTON CEK POIN
+========================= */
+
+.check-score-area{
+    text-align:center;
+    margin:40px 0;
+}
+
+.check-score-btn{
+    padding:15px 40px;
+    border:none;
+    border-radius:14px;
+    background:#1565c0;
+    color:white;
+    font-size:20px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.check-score-btn:hover{
+    background:#0f5fb5;
+    transform:translateY(-3px);
+}
+
+.answer-buttons button.selected{
+    background:#1565c0 !important;
+    color:white !important;
+    border:2px solid #0f5fb5;
+    font-weight:bold;
+    transform:scale(1.05);
+    box-shadow:0 4px 12px rgba(0,0,0,0.25);
+}
+
+/* =========================
+   BUTTON COBA LAGI
+========================= */
+
+.retry-btn{
+    padding:15px 35px;
+    border:none;
+    border-radius:14px;
+    background:#64748b;
+    color:white;
+    font-size:20px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+    margin-left:15px;
+}
+
+.retry-btn:hover{
+    background:#475569;
+    transform:translateY(-3px);
+}
+
+/* =========================
+   PENJELASAN JAWABAN
+========================= */
+
+.explanation{
+    margin-top:15px;
+    padding:15px;
+    border-radius:12px;
+    background:#eff6ff;
+    border-left:5px solid #1565c0;
+    line-height:1.7;
+    display:none;
+    font-size:16px;
 }

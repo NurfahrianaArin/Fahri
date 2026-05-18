@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Evaluasi</h1>
+    <p>Perbandingan Trigonometri</p>
+</header>
+
+<nav>
+    <a href="index.html">Beranda</a>
+    <a href="materi.html">Materi</a>
+    <a href="geogebra.html">Media Interaktif</a>
+    <a href="evaluasi.html" class="active">Evaluasi</a>
+</nav>
+
+<!-- ======================================================
+     EKSPLORASI PERBANDINGAN TRIGONOMETRI
+====================================================== -->
+
+<div class="evaluasi-container">
+
+    <div class="quiz-box">
+
+        <h1 class="quiz-title">
+            Eksplorasi Perbandingan Trigonometri
+        </h1>
+
+        <div class="tab-buttons">
+            <button class="tab-btn active">Sinus</button>
+            <button class="tab-btn">Cosinus</button>
+            <button class="tab-btn">Tangen</button>
+        </div>
+
+<!-- =========================
+     SINUS
+========================= -->
+<div class="tab-content active">
+
+    <!-- Soal 1 -->
+    <div class="question-card">
+
+        <h3>🧠 Aktivitas Sinus 1</h3>
+
+        <p class="question">
+            Pada tampilan GeoGebra, diketahui:
+            <br><br>
+            sisi depan = 6 <br>
+            sisi miring = 10
+            <br><br>
+            Berapakah nilai sin α ?
+        </p>
+
+        <div class="answer-buttons">
+
+            <button onclick="selectAnswer(this,false)">
+                10/6
+            </button>
+
+            <button onclick="selectAnswer(this,true)">
+                6/10
+            </button>
+
+            <button onclick="selectAnswer(this,false)">
+                6/4
+            </button>
+
+        </div>
+
+        <div class="result"></div>
+
+        <div class="explanation">
+            ✅ Jawaban benar: <b>6/10</b>
+            <br><br>
+            Alasan:
+            Nilai sinus diperoleh dari perbandingan
+            <b>sisi depan ÷ sisi miring</b>.
+            <br><br>
+            Maka:
+            <br>
+            sin α = 6 ÷ 10 = 6/10
+        </div>
+
+    </div>
+
+    <!-- Soal 2 -->
+    <div class="question-card">
+
+        <h3>🧠 Aktivitas Sinus 2</h3>
+
+        <p class="question">
+            Saat titik pada GeoGebra digeser sehingga sudut α semakin besar,
+            bagaimana perubahan nilai sinus?
+        </p>
+
+        <div class="answer-buttons">
+
+            <button onclick="selectAnswer(this,false)">
+                Menjadi nol
+            </button>
+
+            <button onclick="selectAnswer(this,false)">
+                Selalu tetap
+            </button>
+
+            <button onclick="selectAnswer(this,true)">
+                Cenderung bertambah
+            </button>
+
+        </div>
+
+        <div class="result"></div>
+
+        <div class="explanation">
+            ✅ Jawaban benar:
+            <b>Cenderung bertambah</b>
+            <br><br>
+            Alasan:
+            Pada segitiga siku-siku,
+            semakin besar sudut α maka nilai sinus
+            biasanya ikut meningkat.
+            <br><br>
+            Hal ini dapat diamati langsung
+            saat titik digeser pada GeoGebra.
+        </div>
+
+    </div>
+
+</div>
+
+<!-- =========================
+     COSINUS
+========================= -->
+<div class="tab-content">
+
+    <!-- Soal 1 -->
+    <div class="question-card">
+
+        <h3>🧠 Aktivitas Cosinus 1</h3>
+
+        <p class="question">
+            Pada segitiga siku-siku di GeoGebra,
+            cosinus diperoleh dari perbandingan ...
+        </p>
+
+        <div class="answer-buttons">
+
+            <button onclick="selectAnswer(this,true)">
+                Sisi samping ÷ sisi miring
+            </button>
+
+            <button onclick="selectAnswer(this,false)">
+                Sisi depan ÷ sisi miring
+            </button>
+
+            <button onclick="selectAnswer(this,false)">
+                Sisi depan ÷ sisi samping
+            </button>
+
+        </div>
+
+        <div class="result"></div>
+
+        <div class="explanation">
+            ✅ Jawaban benar:
+            <b>Sisi samping ÷ sisi miring</b>
+            <br><br>
+            Alasan:
+            Rumus dasar cosinus adalah:
+            <br><br>
+            cos α =
+            <b>sisi samping ÷ sisi miring</b>
+            <br><br>
+            Sisi samping adalah sisi yang dekat
+            dengan sudut α.
+        </div>
+
+    </div>
+
+    <!-- Soal 2 -->
+    <div class="question-card">
+
+        <h3>🧠 Aktivitas Cosinus 2</h3>
+
+        <p class="question">
+            Jika sisi samping = 8 dan sisi miring = 10,
+            maka nilai cos α adalah ...
+        </p>
+
+        <div class="answer-buttons">
+
+            <button onclick="selectAnswer(this,false)">
+                10/8
+            </button>
+
+            <button onclick="selectAnswer(this,true)">
+                8/10
+            </button>
+
+            <button onclick="selectAnswer(this,false)">
+                8/2
+            </button>
+
+        </div>
+
+        <div class="result"></div>
+
+        <div class="explanation">
+            ✅ Jawaban benar:
+            <b>8/10</b>
+            <br><br>
+            Alasan:
+            cosinus diperoleh dari:
+            <br><br>
+            cos α =
+            sisi samping ÷ sisi miring
+            <br><br>
+            Maka:
+            <br>
+            cos α = 8 ÷ 10 = 8/10
+        </div>
+
+    </div>
+
+</div>
+
+<!-- =========================
+     TANGEN
+========================= -->
+<div class="tab-content">
+
+    <!-- Soal 1 -->
+    <div class="question-card">
+
+        <h3>🧠 Aktivitas Tangen 1</h3>
+
+        <p class="question">
+            Nilai tangen diperoleh dari perbandingan ...
+        </p>
+
+        <div class="answer-buttons">
+
+            <button onclick="selectAnswer(this,false)">
+                Sisi samping ÷ sisi miring
+            </button>
+
+            <button onclick="selectAnswer(this,false)">
+                Sisi depan ÷ sisi miring
+            </button>
+
+            <button onclick="selectAnswer(this,true)">
+                Sisi depan ÷ sisi samping
+            </button>
+
+        </div>
+
+        <div class="result"></div>
+
+        <div class="explanation">
+            ✅ Jawaban benar:
+            <b>Sisi depan ÷ sisi samping</b>
+            <br><br>
+            Alasan:
+            Rumus dasar tangen adalah:
+            <br><br>
+            tan α =
+            <b>sisi depan ÷ sisi samping</b>
+            <br><br>
+            Tangen membandingkan sisi depan
+            dengan sisi samping sudut.
+        </div>
+
+    </div>
+
+    <!-- Soal 2 -->
+    <div class="question-card">
+
+        <h3>🧠 Aktivitas Tangen 2</h3>
+
+        <p class="question">
+            Pada tampilan GeoGebra diketahui:
+            <br><br>
+            sisi depan = 4 <br>
+            sisi samping = 2
+            <br><br>
+            Maka nilai tan α adalah ...
+        </p>
+
+        <div class="answer-buttons">
+
+            <button onclick="selectAnswer(this,true)">
+                2
+            </button>
+
+            <button onclick="selectAnswer(this,false)">
+                1/2
+            </button>
+
+            <button onclick="selectAnswer(this,false)">
+                4
+            </button>
+
+        </div>
+
+        <div class="result"></div>
+
+        <div class="explanation">
+            ✅ Jawaban benar:
+            <b>2</b>
+            <br><br>
+            Alasan:
+            Rumus tangen:
+            <br><br>
+            tan α =
+            sisi depan ÷ sisi samping
+            <br><br>
+            Maka:
+            <br>
+            tan α = 4 ÷ 2 = 2
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ======================================================
+     GEO GAME ZONE
+====================================================== -->
+
+<div class="evaluasi-container game-zone">
+
+    <div class="quiz-box">
+
+        <h1 class="game-title">
+            🎮 Geo-Game Zone
+        </h1>
+
+        <!-- SOAL 1 -->
+        <div class="game-question">
+
+            <h4>1. Menentukan Nilai Sinus</h4>
+
+            <p>
+                Jika sisi depan = 9 dan sisi miring = 15,
+                maka nilai sin α adalah ...
+            </p>
+
+            <div class="answer-buttons">
+
+                <button onclick="selectGameAnswer(this,true)">
+                    3/5
+                </button>
+
+                <button onclick="selectGameAnswer(this,false)">
+                    5/3
+                </button>
+
+                <button onclick="selectGameAnswer(this,false)">
+                    9/6
+                </button>
+
+            </div>
+
+            <div class="result"></div>
+
+            <div class="explanation">
+
+                ✅ Jawaban benar:
+                <b>3/5</b>
+
+                <br><br>
+
+                Alasan:
+                Nilai sinus diperoleh dari:
+                <br><br>
+
+                <b>sin α = sisi depan ÷ sisi miring</b>
+
+                <br><br>
+
+                Maka:
+                <br>
+
+                sin α = 9 ÷ 15 = 3/5
+
+            </div>
+
+        </div>
+
+        <!-- SOAL 2 -->
+        <div class="game-question">
+
+            <h4>2. Menentukan Cosinus</h4>
+
+            <p>
+                Jika sisi samping = 12 dan sisi miring = 13,
+                maka nilai cos α adalah ...
+            </p>
+
+            <div class="answer-buttons">
+
+                <button onclick="selectGameAnswer(this,false)">
+                    1/13
+                </button>
+
+                <button onclick="selectGameAnswer(this,false)">
+                    13/12
+                </button>
+
+                <button onclick="selectGameAnswer(this,true)">
+                    12/13
+                </button>
+
+            </div>
+
+            <div class="result"></div>
+
+            <div class="explanation">
+
+                ✅ Jawaban benar:
+                <b>12/13</b>
+
+                <br><br>
+
+                Alasan:
+                Rumus cosinus adalah:
+                <br><br>
+
+                <b>cos α = sisi samping ÷ sisi miring</b>
+
+                <br><br>
+
+                Maka:
+                <br>
+
+                cos α = 12 ÷ 13 = 12/13
+
+            </div>
+
+        </div>
+
+        <!-- SOAL 3 -->
+        <div class="game-question">
+
+            <h4>3. Menentukan Tangen</h4>
+
+            <p>
+                Jika sisi depan = 6 dan sisi samping = 3,
+                maka nilai tan α adalah ...
+            </p>
+
+            <div class="answer-buttons">
+
+                <button onclick="selectGameAnswer(this,true)">
+                    2
+                </button>
+
+                <button onclick="selectGameAnswer(this,false)">
+                    1/2
+                </button>
+
+                <button onclick="selectGameAnswer(this,false)">
+                    3
+                </button>
+
+            </div>
+
+            <div class="result"></div>
+
+            <div class="explanation">
+
+                ✅ Jawaban benar:
+                <b>2</b>
+
+                <br><br>
+
+                Alasan:
+                Rumus tangen:
+                <br><br>
+
+                <b>tan α = sisi depan ÷ sisi samping</b>
+
+                <br><br>
+
+                Maka:
+                <br>
+
+                tan α = 6 ÷ 3 = 2
+
+            </div>
+
+        </div>
+
+        <!-- SOAL 4 -->
+        <div class="game-question">
+
+            <h4>4. Konsep Trigonometri</h4>
+
+            <p>
+                Jika sudut α semakin besar,
+                maka nilai sin α pada GeoGebra akan ...
+            </p>
+
+            <div class="answer-buttons">
+
+                <button onclick="selectGameAnswer(this,false)">
+                    Menjadi negatif
+                </button>
+
+                <button onclick="selectGameAnswer(this,false)">
+                    Selalu tetap
+                </button>
+
+                <button onclick="selectGameAnswer(this,true)">
+                    Cenderung meningkat
+                </button>
+
+            </div>
+
+            <div class="result"></div>
+
+            <div class="explanation">
+
+                ✅ Jawaban benar:
+                <b>Cenderung meningkat</b>
+
+                <br><br>
+
+                Alasan:
+                Saat sudut α diperbesar pada GeoGebra,
+                sisi depan terhadap sisi miring menjadi lebih besar,
+                sehingga nilai sinus ikut meningkat.
+
+                <br><br>
+
+                Hal ini dapat diamati langsung
+                melalui eksplorasi visual pada media.
+
+            </div>
+
+        </div>
+
+        <!-- SOAL 5 -->
+        <div class="game-question">
+
+            <h4>5. Identifikasi Perbandingan</h4>
+
+            <p>
+                Perbandingan sisi depan terhadap sisi miring disebut ...
+            </p>
+
+            <div class="answer-buttons">
+
+                <button onclick="selectGameAnswer(this,true)">
+                    Sinus
+                </button>
+
+                <button onclick="selectGameAnswer(this,false)">
+                    Cosinus
+                </button>
+
+                <button onclick="selectGameAnswer(this,false)">
+                    Tangen
+                </button>
+
+            </div>
+
+            <div class="result"></div>
+
+            <div class="explanation">
+
+                ✅ Jawaban benar:
+                <b>Sinus</b>
+
+                <br><br>
+
+                Alasan:
+                Dalam trigonometri:
+                <br><br>
+
+                <b>sin α = sisi depan ÷ sisi miring</b>
+
+                <br><br>
+
+                Karena yang dibandingkan adalah
+                sisi depan dengan sisi miring,
+                maka disebut sinus.
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- =========================
+     HASIL NILAI
+========================= -->
+
+<div class="check-score-area">
+
+    <button class="check-score-btn"
+    onclick="showResults()">
+
+        Cek Poin
+
+    </button>
+
+    <button class="retry-btn"
+    onclick="resetQuiz()">
+        Coba Lagi
+    </button>
+
+</div>
+
+<div class="score-box">
+
+    <h2>Hasil Evaluasi</h2>
+
+    <p id="score-text">
+        Poin Kamu: 0
+    </p>
+
+    <p id="motivation-text">
+        Semangat belajar perbandingan trigonometri!
+    </p>
+
+</div>
+
+<link rel="stylesheet" href="css/style.css">
+<script src="js/script.js"></script>
+
+</body>
+</html>
